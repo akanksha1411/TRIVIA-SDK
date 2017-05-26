@@ -775,6 +775,13 @@ public class TriviaLoginView extends LinearLayout implements TriviaConstants {
         }
     }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasWindowFocus) {
+        super.onWindowFocusChanged(hasWindowFocus);
+        if (hasWindowFocus) {
+            refreshTriviaView();
+        }
+    }
 
     /**
      * Add post parameters for dashboard api call and call api data
